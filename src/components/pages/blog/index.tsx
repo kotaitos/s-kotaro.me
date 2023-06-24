@@ -1,6 +1,6 @@
 import { FC } from 'react'
 
-export const Blog: FC = () => {
+export const BlogPage: FC = () => {
   return (
     <main>
       Blog
@@ -8,4 +8,4 @@ export const Blog: FC = () => {
   )
 }
 
-export default Blog
+export default BlogPage

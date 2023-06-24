@@ -1,13 +1,13 @@
 import { NextPage } from "next"
-import { Blog } from '@/src/components/pages/blog'
+import { BlogPage } from '@/src/components/pages/blog'
 
 
-const BlogPage: NextPage = () => {
+const Blog: NextPage = () => {
   return (
     <>
-      <Blog />
+      <BlogPage />
     </>
   )
 }
 
-export default BlogPage
+export default Blog

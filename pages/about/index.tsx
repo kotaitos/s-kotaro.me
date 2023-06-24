@@ -1,12 +1,12 @@
 import { NextPage } from 'next'
-import { About } from '@/src/components/pages/about'
+import { AboutPage } from '@/src/components/pages/about'
 
-const AboutPage: NextPage = () => {
+const About: NextPage = () => {
   return (
     <>
-      <About />
+      <AboutPage />
     </>
   )
 }
 
-export default AboutPage
+export default About

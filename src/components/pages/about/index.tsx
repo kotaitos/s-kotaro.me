@@ -1,6 +1,6 @@
 import { FC } from 'react'
 
-export const About: FC = () => {
+export const AboutPage: FC = () => {
   return (
     <main>
       About
@@ -8,4 +8,4 @@ export const About: FC = () => {
   )
 }
 
-export default About
+export default AboutPage

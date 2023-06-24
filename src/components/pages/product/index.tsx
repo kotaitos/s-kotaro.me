@@ -1,6 +1,6 @@
 import { FC } from 'react'
 
-export const Product: FC = () => {
+export const ProductPage: FC = () => {
   return (
     <main>
       Product
@@ -8,4 +8,4 @@ export const Product: FC = () => {
   );
 }
 
-export default Product
+export default ProductPage

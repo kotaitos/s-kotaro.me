@@ -1,10 +1,11 @@
-import { NextPage } from "next";
+import { NextPage } from "next"
+import { HomePage } from '@/src/components/pages/home'
 
 const Home: NextPage = () => {
   return (
-    <main>
-      Home
-    </main>
+    <>
+      <HomePage />
+    </>
   )
 }
 

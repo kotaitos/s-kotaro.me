@@ -1,12 +1,12 @@
-import { NextPage } from "next";
-import { Product } from '@/src/components/pages/product';
+import { NextPage } from "next"
+import { ProductPage } from '@/src/components/pages/product'
 
-const ProductPage: NextPage = () => {
+const Product: NextPage = () => {
   return (
     <>
-      <Product />
+      <ProductPage />
     </>
   )
 }
 
-export default ProductPage;
+export default Product
