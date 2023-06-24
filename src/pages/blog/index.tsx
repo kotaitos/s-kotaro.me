@@ -1,5 +1,5 @@
 import { NextPage } from "next"
-import { BlogPage } from '@/src/components/pages/blog'
+import { BlogPage } from '@/components/pages/blog'
 
 
 const Blog: NextPage = () => {

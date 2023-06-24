@@ -1,5 +1,5 @@
 import { NextPage } from "next"
-import { HomePage } from '@/src/components/pages/home'
+import { HomePage } from '@/components/pages/home'
 
 const Home: NextPage = () => {
   return (
