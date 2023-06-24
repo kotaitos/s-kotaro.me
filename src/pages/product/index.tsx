@@ -1,5 +1,5 @@
 import { NextPage } from "next"
-import { ProductPage } from '@/components/pages/product'
+import { ProductPage } from '@/components/product'
 
 const Product: NextPage = () => {
   return (
