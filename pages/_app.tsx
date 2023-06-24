@@ -1,31 +1,31 @@
-import '@/styles/globals.css'
-import type { AppProps } from 'next/app'
-import { NextUIProvider, createTheme } from '@nextui-org/react';
-import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client'
+import * as React from 'react';
+import Head from 'next/head';
+import { AppProps } from 'next/app';
+import { ThemeProvider } from '@mui/material/styles';
+import CssBaseline from '@mui/material/CssBaseline';
+import { CacheProvider, EmotionCache } from '@emotion/react';
+import theme from '../src/theme';
+import createEmotionCache from '../src/createEmotionCache';
 
-const client = new ApolloClient({
-  uri: '/api/graphql',
-  cache: new InMemoryCache(),
-})
+// Client-side cache, shared for the whole session of the user in the browser.
+const clientSideEmotionCache = createEmotionCache();
 
-export default function App({ Component, pageProps }: AppProps) {
+export interface MyAppProps extends AppProps {
+  emotionCache?: EmotionCache;
+}
 
-  const theme = createTheme({
-    type: "dark", // it could be "light" or "dark"
-    theme: {
-      colors: {
-        primary: '#4ADE7B',
-        secondary: '#F9CB80',
-        error: '#FCC5D8',
-      },
-    }
-  })
-
+export default function MyApp(props: MyAppProps) {
+  const { Component, emotionCache = clientSideEmotionCache, pageProps } = props;
   return (
-    <ApolloProvider client={client}>
-      <NextUIProvider theme={theme}>
+    <CacheProvider value={emotionCache}>
+      <Head>
+        <meta name="viewport" content="initial-scale=1, width=device-width" />
+      </Head>
+      <ThemeProvider theme={theme}>
+        {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
+        <CssBaseline />
         <Component {...pageProps} />
-      </NextUIProvider>
-    </ApolloProvider>
-  )
+      </ThemeProvider>
+    </CacheProvider>
+  );
 }
