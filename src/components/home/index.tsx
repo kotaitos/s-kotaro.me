@@ -1,8 +1,8 @@
 import { FC } from 'react'
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
-import HomeLeft from './element/homeLeft';
-import HomeRight from './element/homeRight';
+import HomeLeft from './elements/homeLeft';
+import HomeRight from './elements/homeRight';
 
 
 export const HomePage: FC = () => {
