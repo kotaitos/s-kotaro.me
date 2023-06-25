@@ -13,15 +13,18 @@ export const HomeLeft: FC = () => {
       }}>
         <TypeAnimation
           sequence={[
-            "Hello, there.",
-            1000,
+            "Hi, there.👋",
+            3000,
             "I'm Kotaro Saito.",
-            1000,
+            3000,
+            "Thank you for visiting my website.",
+            3000,
+            "Please check out my resume, portfolio, and blog on the right side.",
+            5000,
           ]}
           wrapper="span"
           speed={50}
           style={{ fontSize: '2em', display: 'inline-block' }}
-          repeat={Infinity}
         />
       </Box>
     </>
