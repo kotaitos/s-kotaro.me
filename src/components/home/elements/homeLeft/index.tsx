@@ -9,6 +9,8 @@ export const HomeLeft: FC = () => {
       <Box sx={{
         p: 10,
         m: 10,
+        minWidth: 400,
+        minHeight: 300,
         border: '1px white solid',
       }}>
         <TypeAnimation
