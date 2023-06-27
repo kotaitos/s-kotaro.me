@@ -1,7 +1,7 @@
 import { FC } from "react";
-import Link from 'next/link';
 import Box from '@mui/material/Box';
-import { GitHub, Twitter } from '@material-ui/icons';
+import Grid from '@mui/material/Grid';
+import { NavigationCard } from './elements/navigationCard';
 
 
 export const HomeLeft: FC = () => {
@@ -9,27 +9,19 @@ export const HomeLeft: FC = () => {
     <>
       <Box
         sx={{
+          p: 5,
           height: '100%',
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'center',
           alignItems: 'center',
           backgroundColor: 'primary.main',
-          '& hover': {
-            backgroundColor: 'primary.light',
-          },
         }}>
-        <Link href="/about">
-          About
-        </Link>
-        <Link href="/product">
-          Product
-        </Link>
-        <Link href="/blog">
-          Blog
-        </Link>
-        <GitHub />
-        <Twitter />
+          <Grid container>
+            <NavigationCard name="about" />
+            <NavigationCard name="product" />
+            <NavigationCard name="blog" />
+          </Grid>
       </Box>
     </>
   )
