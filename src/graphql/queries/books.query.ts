@@ -1,5 +1,5 @@
 import { gql } from '@apollo/client';
-import { Book } from '../../types/book';
+import { Book } from '../schemas/book';
 
 export const BOOKS_QUERY = gql`
 #graphql

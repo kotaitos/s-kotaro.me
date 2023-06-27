@@ -1,0 +1,22 @@
+@import 'variables.scss';
+@font-face {
+  font-family: 'DragonQuest';
+  src: url('../assets/DragonQuestFC.ttf') format('truetype');
+}
+
+:root {
+  --foreground: black;
+  --background: white;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground: white;
+    --background: black;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
