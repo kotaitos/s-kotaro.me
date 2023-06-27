@@ -3,6 +3,7 @@ import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import HomeLeft from './elements/homeLeft';
 import HomeRight from './elements/homeRight';
+import Icons from './elements/icons';
 
 
 export const HomePage: FC = () => {
@@ -16,9 +17,6 @@ export const HomePage: FC = () => {
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: 'primary.main',
-        '& hover': {
-          backgroundColor: 'primary.light',
-        },
       }}>
         <Grid container>
           <Grid item xs={6}>
@@ -26,6 +24,9 @@ export const HomePage: FC = () => {
           </Grid>
           <Grid item xs={6}>
             <HomeRight />
+          </Grid>
+          <Grid item xs={12} sx={{ display: 'flex', justifyContent: 'center' }}>
+            <Icons />
           </Grid>
         </Grid>
       </Box>
